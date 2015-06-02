@@ -1,6 +1,6 @@
 /* 
- * Essa classe é responsável por armazenar as duas centrais conectadas por uma linha, retorná-las quando necessário e 
-      informar se a linha está ou não ocupada.
+ * Essa classe ï¿½ responsï¿½vel por armazenar as duas centrais conectadas por uma linha, retornï¿½-las quando necessï¿½rio e 
+      informar se a linha estï¿½ ou nï¿½o ocupada.
 */
 
 package tppm;
