@@ -9,7 +9,7 @@ package tppm;
 
 public class Assinante { 
 	private String nome;
-	//private int id;
+	//private int id; //oi
 	private String tel;
 	private boolean ocupado;
 	private boolean emLigacao;
