@@ -14,7 +14,7 @@ public class Assinante {
 	private boolean ocupado;
 	private boolean emLigacao;
 	private boolean telTocando;
-	private int impulsos;
+	private int impulsos; 
 	
 	public Assinante() {
 		// TODO Auto-generated constructor stub
