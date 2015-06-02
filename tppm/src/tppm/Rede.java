@@ -8,18 +8,29 @@
 
 package tppm;
 
+import java.util.ArrayList;
+
 public class Rede {
+	
 	public boolean consultaCentral (String id) {
 		
 		return false;
 	}
+	
 	public String getCentral (String id) {  //Dúvida no tipo de retorno (deve retornar uma central)
 		
 		return null;
 	}
+	
 	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Dúvida no tipo de retorno (deve retornar o caminho ou null)
-		return " ";
 		
+		return " ";
 	}
+	
+	public boolean fechaConexao (String assinanteA, String AssinanteB, String central, ArrayList<Integer> caminho, int tempo) {
+		
+		return false;		
+	}
+	
 	
 }
