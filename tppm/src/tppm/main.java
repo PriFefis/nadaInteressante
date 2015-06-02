@@ -7,6 +7,8 @@ public class main {
 		//teste
 		//sempre sincronizar!!!!!
 		System.out.println("boa sorte!!");
+		
+		System.out.println("boa sorte!!");
 	}
 
 }
