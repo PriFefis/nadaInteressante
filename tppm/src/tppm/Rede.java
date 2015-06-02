@@ -11,26 +11,25 @@ package tppm;
 import java.util.ArrayList;
 
 public class Rede {
-	
-	public boolean consultaCentral (String id) {
-		
+	//Pesquisa em todas as centrais. Se encontrar, faz a atribuição do label e retorna true. Caso contrário retorna false.
+	public boolean consultaCentral (String label) {		
 		return false;
 	}
 	
-	public String getCentral (String id) {  //Dúvida no tipo de retorno (deve retornar uma central)
+	//Pesquisa em todas as centrais. Se encontrar, faz a atribuição do label e retorna a central. Caso contrário retorna null.
+	public String getCentral (String label) {  //Dúvida no tipo de retorno (deve retornar uma central)
 		
 		return null;
 	}
 	
+	//Pesquisa. Se a centralA ou a centralB não existir, não é estabelecido a conexão e retorna null. Se existir, deve-se olhar o status do AssinanteA e do AssinanteB (se existem e estão disponíveis) e se há um caminho entre eles. Se sim, o cliente recebe o tom de discagem/tocando e a função retorna o caminho. Se não, envia o sinal de ocupado e retorna null.
 	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Dúvida no tipo de retorno (deve retornar o caminho ou null)
 		
 		return " ";
 	}
 	
-	public boolean fechaConexao (String assinanteA, String AssinanteB, String central, ArrayList<Integer> caminho, int tempo) {
-		
+	//Pesquisa se a central e o caminho existem. Se não, indica que não existe conexão e retorna falso. Se existir e o cliente que ligou desligar ou o cliente que recebeu a ligação desligá-a e passar os 90 segundos, a conexão é encerrada, retornando true. Se o cliente que recebeu a ligação desligar e pegar o telefone novamente dentro dos 90 segundos, a conexão continua, retornando false. 
+	public boolean fechaConexao (String assinanteA, String AssinanteB, String central, ArrayList<Integer> caminho, int tempo) {	
 		return false;		
 	}
-	
-	
 }
