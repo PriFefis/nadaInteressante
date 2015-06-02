@@ -1,6 +1,7 @@
 /*
- *
- Essa classe e responsavel por armazenar o nome da central, todos os seus clientes e todas as linhas que esta central possui. 
+
+ Essa classe � respons�vel por armazenar o nome da central, todos os seus clientes e todas as linhas que esta central possui. 
+ branch 'master' of https://github.com/PriFefis/nadaInteressante.git
  * Tamb�m � respons�vel pela manuten��o dos clientes e linhas entre as centrais, enviar contas para os clientes e 
   	  conectar seus clientes com os clientes de outras centrais.
 */
@@ -14,7 +15,10 @@ public class Central {
 	
 	List<Clientes> contas = new ArrayList<Clientes>();	
 	
+
 	public Central(String nome, int id, String localizacao ){
+
+	public Central(String nome, int centraId, String localizacao ){
 		public String getNome() {
 			return nome;
 		}
