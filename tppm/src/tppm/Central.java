@@ -12,28 +12,28 @@ public class Central {
 	private int centralId;
 	private String localizacao;
 	
-	List<Clientes> contas = new ArrayList<Clientes>();	
-	
-	public Central(String nome, int id, String localizacao ){
-		public String getNome() {
-			return nome;
-		}
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
-		public int getId() {
-			return centralId;
-		}
-		public void setId(int id) {
-			this.centralId = centralId;
-		}
-		public String getlocalizacao() {
-			return localizacao;
-		}
-		public void setLocalizacao(String localizacao) {
-			this.localizacao = localizacao;
-		}
-		
-	}
+//	List<Clientes> contas = new ArrayList<Clientes>();	
+//	
+//	public Central(String nome, int id, String localizacao ){
+//		public String getNome() {
+//			return nome;
+//		}
+//		public void setNome(String nome) {
+//			this.nome = nome;
+//		}
+//		public int getId() {
+//			return centralId;
+//		}
+//		public void setId(int id) {
+//			this.centralId = centralId;
+//		}
+//		public String getlocalizacao() {
+//			return localizacao;
+//		}
+//		public void setLocalizacao(String localizacao) {
+//			this.localizacao = localizacao;
+//		}
+//		
+//	}
 
 }
