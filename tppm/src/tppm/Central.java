@@ -14,7 +14,7 @@ public class Central {
 	
 	List<Clientes> contas = new ArrayList<Clientes>();	
 	
-	public Central(String nome, int id, String localizacao ){
+	public Central(String nome, int centraId, String localizacao ){
 		public String getNome() {
 			return nome;
 		}
