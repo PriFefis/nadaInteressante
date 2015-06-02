@@ -1,9 +1,10 @@
 /* 
- * Essa classe é responsável por criar todas as conexões a partir de um arquivo de entrada. 
- * Ela é a classe de maior nível e controla toda a rede telefônica. 
- * Após a leitura do arquivo, ela cria as centrais e seus respectivos clientes, as linhas que conectam duas centrais e 
-      recebe todas as tentativas de chamada. Tem o papel de relacionar os módulos, consultar a central, 
-      retornar a central desejada com os clientes, fazer a conexão entre dois clientes e remover esta conexão. 
+ * 
+Essa classe ï¿½ responsï¿½vel por criar todas as conexï¿½es a partir de um arquivo de entrada. 
+ * Ela ï¿½ a classe de maior nï¿½vel e controla toda a rede telefï¿½nica. 
+ * Apï¿½s a leitura do arquivo, ela cria as centrais e seus respectivos clientes, as linhas que conectam duas centrais e 
+      recebe todas as tentativas de chamada. Tem o papel de relacionar os mï¿½dulos, consultar a central, 
+      retornar a central desejada com os clientes, fazer a conexï¿½o entre dois clientes e remover esta conexï¿½o. 
 */
 
 package tppm;
@@ -17,12 +18,12 @@ public class Rede {
 		return false;
 	}
 	
-	public String getCentral (String id) {  //Dúvida no tipo de retorno (deve retornar uma central)
+	public String getCentral (String id) {  //Dï¿½vida no tipo de retorno (deve retornar uma central)
 		
 		return null;
 	}
 	
-	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Dúvida no tipo de retorno (deve retornar o caminho ou null)
+	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Dï¿½vida no tipo de retorno (deve retornar o caminho ou null)
 		
 		return " ";
 	}

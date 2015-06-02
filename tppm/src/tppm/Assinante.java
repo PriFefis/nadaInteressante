@@ -1,8 +1,8 @@
 /* 
- * Essa classe é responsável por armazenar os dados do cliente, a quantidade de ligações realizadas, 
-     se este está em uma ligação, se seu telefone está tocando e se está ocupado. 
- * Tendo funções para retornar cada um destes elementos, funções para modificar as variáveis que podem ser alteradas 
-     e uma função que retorna se o cliente pode receber ou não uma requisição de chamada (getAvailable).
+ Essa classe ï¿½ responsï¿½vel por armazenar os dados do cliente, a quantidade de ligaï¿½ï¿½es realizadas, 
+     se este estï¿½ em uma ligaï¿½ï¿½o, se seu telefone estï¿½ tocando e se estï¿½ ocupado. 
+ * Tendo funï¿½ï¿½es para retornar cada um destes elementos, funï¿½ï¿½es para modificar as variï¿½veis que podem ser alteradas 
+     e uma funï¿½ï¿½o que retorna se o cliente pode receber ou nï¿½o uma requisiï¿½ï¿½o de chamada (getAvailable).
 */
 
 package tppm;
