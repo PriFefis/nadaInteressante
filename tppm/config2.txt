@@ -1,0 +1,17 @@
+5                  //Número de centrais envolvidas
+3	   	   //Número de linhas entre centrais conectadas
+centralA   	   //Labels das centrais
+centralB   	   // ''    ''     ''
+centralC   	   // ''    ''     ''	
+centralD   	   // ''    ''     ''
+centralE   	   // ''    ''     ''
+1 1 0 0 1  	   //Conexões da centralA
+1 1 1 1 0  	   //Conexões da centralB
+0 1 1 0 0  	   //Conexões da centralC
+0 1 0 1 0  	   //Conexões da centralD
+1 0 0 0 1  	   //Conexões da centralE
+a1 a2 a3 a4 a5 a6  //Lista de assinantes da centralA
+b1 b2 b3           //Lista de assinantes da centralB
+c1 c2 c3 c4 c5     //Lista de assinantes da centralC
+d1 d2              //Lista de assinantes da centralD
+e1                 //Lista de assinantes da centralE
