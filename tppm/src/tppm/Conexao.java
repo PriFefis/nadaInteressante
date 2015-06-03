@@ -1,6 +1,6 @@
 /* 
- * Essa classe e responsavel por armazenar as duas centrais conectadas por uma linha, retorna-las quando necessario e 
-      informar se a linha esta ou nao ocupada.
+ * Essa classe e responsavel por armazenar as duas centrais conectadas por uma linha, retorna-las quando 
+    necessario e informar se a linha esta ou nao ocupada.
 */
 
 package tppm;
@@ -8,19 +8,32 @@ package tppm;
 public class Conexao {
 	private String central_A;
 	private String central_B;
+	private boolean disponivel;
+	
 	//O construtor cria uma linha desocupada entre as centrais A e B.
 	public Conexao(String centralA, String centralB) {
 		this.central_A = centralA;
 		this.central_B = centralB;
 	}
-	//Retorna central conectada com central de label
+	
+	//Retorna a central do outro lado da linha, conectada com a central label.
 	public Central getCentralConectada (String label){
 		return null;
 	}
-	public String getCentral_A() {
-		return central_A;
+	
+	//Retorna true se a central label existir e false se não existir.
+	public String getCentral(String label) {
+		return " ";
 	}
-	public void setCentral_A(String central_A) {
-		this.central_A = central_A;
+	
+	//Retorna se a linha está ocupada.
+	public boolean getDisponivel() {
+		
+		return false;		
+	}
+	
+	//Altera o valor da variável disponivel.
+	public void setDisponivel(boolean disponivel){  
+		
 	}
 }

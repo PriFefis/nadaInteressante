@@ -1,9 +1,9 @@
 /* 
- * Essa classe e responsavel por criar todas as conexoes s a partir de um arquivo de entrada. 
+ * Essa classe e responsavel por criar todas as conexoes a partir de um arquivo de entrada. 
  * Ela e a classe de maior nivel e controla toda a rede telefonica. 
- * Apos a leitura do arquivo, ela cria as centrais e seus respectivos clientes, as linhas que conectam duas centrais e 
-      recebe todas as tentativas de chamada. Tem o papel de relacionar os modulos, consultar a central, 
-      retornar a central desejada com os clientes, fazer a conexão entre dois clientes e remover esta conexao. 
+ * Apos a leitura do arquivo, cria as centrais e seus respectivos assinantes, as linhas que conectam duas centrais 
+    e recebe todas as tentativas de chamada. Tem o papel de relacionar os modulos, consultar a central, 
+    retornar a central desejada com os assinantes, fazer a conexao entre dois assinantes e remover esta conexao. 
 */
 
 package tppm;
@@ -11,24 +11,32 @@ package tppm;
 import java.util.ArrayList;
 
 public class Rede {
-	//Pesquisa em todas as centrais. Se encontrar, faz a atribuição do label e retorna true. Caso contrário retorna false.
+	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do label e retorna true. 
+	 Caso contrario retorna false. */
 	public boolean consultaCentral (String label) {		
 		return false;
 	}
 	
-	//Pesquisa em todas as centrais. Se encontrar, faz a atribuição do label e retorna a central. Caso contrário retorna null.
-	public String getCentral (String label) {  //Dúvida no tipo de retorno (deve retornar uma central)
+	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do label e retorna a central. 
+	 Caso contrario retorna null. */
+	public String getCentral (String label) {  //Duvida no tipo de retorno (deve retornar uma central)
 		
 		return null;
 	}
 	
-	//Pesquisa. Se a centralA ou a centralB não existir, não é estabelecido a conexão e retorna null. Se existir, deve-se olhar o status do AssinanteA e do AssinanteB (se existem e estão disponíveis) e se há um caminho entre eles. Se sim, o cliente recebe o tom de discagem/tocando e a função retorna o caminho. Se não, envia o sinal de ocupado e retorna null.
-	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Dúvida no tipo de retorno (deve retornar o caminho ou null)
+	/*Pesquisa se a central A e a central B existem. Se nao existirem, nao e estabelecido a conexao e retorna null.
+	 Se existirem, deve-se olhar o status do Assinante A e do Assinante B (se existem e estao disponiveis) e 
+	 se ha um caminho entre eles. Se sim, o assinante recebe o tom de discagem/tocando e a funcao retorna o caminho. 
+	 Se nao, envia o sinal de ocupado e retorna null. */
+	public String getConexao (String assinanteA, String centralA, String assinanteB, String centralB){  //Duvida no tipo de retorno (deve retornar o caminho ou null)
 		
 		return " ";
 	}
 	
-	//Pesquisa se a central e o caminho existem. Se não, indica que não existe conexão e retorna falso. Se existir e o cliente que ligou desligar ou o cliente que recebeu a ligação desligá-a e passar os 90 segundos, a conexão é encerrada, retornando true. Se o cliente que recebeu a ligação desligar e pegar o telefone novamente dentro dos 90 segundos, a conexão continua, retornando false. 
+	/*Pesquisa se a central e o caminho existem. Se nao, indica que nao existe conexao e retorna falso. 
+	 Se existir e o assinante que ligou desligar ou o assinante que recebeu a ligacao desliga-la e passar os 
+	 90 segundos, a conexao e encerrada, retornando true. Se o assinante que recebeu a ligacao desligar e 
+	 pegar o telefone novamente dentro dos 90 segundos, a conexao continua, retornando false. */
 	public boolean fechaConexao (String assinanteA, String AssinanteB, String central, ArrayList<Integer> caminho, int tempo) {	
 		return false;		
 	}
