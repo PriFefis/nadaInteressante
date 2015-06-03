@@ -1,17 +1,15 @@
 /* 
- * Essa classe é responsavel por armazenar as duas centrais conectadas por uma linha, retorna-las quando necessario e 
+ * Essa classe e responsavel por armazenar as duas centrais conectadas por uma linha, retorna-las quando necessario e 
       informar se a linha esta ou nao ocupada.
 */
-//Sol, essa classe nao e referente a uma ligacao feita por um assinante. Ela diz respeito a uma linha (conexao) 
-//que existe entre duas centrais.
 
 package tppm;
 
-public class Ligacao {
+public class Conexao {
 	private String central_A;
 	private String central_B;
 	//O construtor cria uma linha desocupada entre as centrais A e B.
-	public Ligacao(String centralA, String centralB) {
+	public Conexao(String centralA, String centralB) {
 		this.central_A = centralA;
 		this.central_B = centralB;
 	}
