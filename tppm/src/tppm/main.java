@@ -8,11 +8,7 @@ public class main {
 		//sempre sincronizar!!!!!
 		System.out.println("boa sorte!!");
 		
-		System.out.println("boa sorte!!");
-		
-		System.out.println("boa sorte!!");
-		
-		System.out.println("Oiii Priscila!");
+	
 	}
 
 }
