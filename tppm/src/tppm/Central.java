@@ -1,7 +1,8 @@
 /*
- * Essa classe e responsavel por armazenar o nome da central, todos os seus assinantes e todas as linhas que esta 
-    central possui. Tambem e responsavel pela manutencao dos assinantes e linhas entre as centrais, enviar contas 
-    para os assinantes e conectar seus assinantes com os assinantes de outras centrais.
+ * Essa classe e responsavel por armazenar o nome da central, todos os seus assinantes e 
+   todas as linhas que esta central possui. Tambem e responsavel pela manutencao dos 
+   assinantes e linhas entre as centrais, enviar contas para os assinantes e conectar 
+   seus assinantes com os assinantes de outras centrais.
 */
 
 package tppm;
