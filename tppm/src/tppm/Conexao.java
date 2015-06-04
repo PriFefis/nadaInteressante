@@ -25,7 +25,7 @@ public class Ligacao {
 	}
 	public void setCentral_A(String central_A) {
 		this.central_A = central_A;
-=======
+
  * Essa classe e responsavel por armazenar as duas centrais conectadas por uma linha, 
     retorna-las quando necessario e informar se a linha esta ou nao ocupada.
 */
@@ -61,6 +61,5 @@ public class Conexao {
 	//Altera o valor da variavel disponivel.
 	public void setDisponivel(boolean disponivel) {
 		this.disponivel = disponivel;
->>>>>>> branch 'master' of https://github.com/PriFefis/nadaInteressante.git
 	}
 }
