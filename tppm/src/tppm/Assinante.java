@@ -1,8 +1,8 @@
 /* 
- Essa classe e responsavel por armazenar os dados do cliente, a quantidade de ligacoes realizadas, 
+ Essa classe e responsavel por armazenar os dados do assinante, a quantidade de ligacoes realizadas, 
      se este esta em uma ligacao, se seu telefone esta tocando e se esta ocupado. 
- * Tendo funcoes para retornar cada um destes elementos, funcoes para modificar as variaveis que podem ser alteradas 
-     e uma funcao que retorna se o cliente pode receber ou nao uma requisicao de chamada (getAvailable).
+ * Ha funcoes para retornar cada um destes elementos, funcoes para modificar as variaveis que podem ser alteradas 
+     e uma funcao que retorna se o assinante pode receber ou nao uma requisicao de chamada (getAvailable).
 */
 
 package tppm;
@@ -15,17 +15,18 @@ public class Assinante {
 	private boolean emLigacao;
 	private boolean telTocando;
 	private int impulsos;
+	private int quantLigacoesRealizadas;
 	
 	public Assinante() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	//Retorna o nome do assinante
+	//Retorna o nome do assinante.
 	public String getNome() {
 		return nome;
 	}
 	
-	//Configura (setta) o nome do assinante
+	//Configura (setta) o nome do assinante.
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -36,7 +37,7 @@ public class Assinante {
 //		this.id = id;
 //	}
 
-	//Retorna o número do telefone do assinante.
+	//Retorna o numero do telefone do assinante.
 	public String getTel() {
 		return tel;
 	}
@@ -46,7 +47,18 @@ public class Assinante {
 		this.tel = tel;
 	}
 	
-	//Se o assinante não estiver em uma ligação e seu telefone não estiver tocando, retorna true. Retorna false se uma destas condições forem diferentes.
+	//Retorna a quantidade de ligacoes realizadas pelo assinante.
+	public int getQuantLigacoesRealizadas() {
+		return quantLigacoesRealizadas;
+	}
+
+	//configura a quantidade de ligacoes realizadas pelo assinante.
+	public void setQuantLigacoesRealizadas(int quantLigacoesRealizadas) {
+		this.quantLigacoesRealizadas = quantLigacoesRealizadas;
+	}
+
+	/*Se o assinante nao estiver em uma ligacao e seu telefone nao estiver tocando, retorna true. 
+	 Retorna false se uma destas condicoes forem diferentes. */
 	public boolean getDisponivel () {
 		if (!isEmLigacao() && !isTelTocando())
 			return true;
@@ -54,32 +66,32 @@ public class Assinante {
 			return false;
 	}
 	
-	//Retorna se o assinante está ocupado ou não.
+	//Retorna se o assinante esta ocupado ou nao.
 	public boolean isOcupado() {
 		return ocupado;
 	}
 		
-	//Altera o valor da variavel ocupado. Configura se o assinante está ou não ocupado.
+	//Altera o valor da variavel ocupado. Configura se o assinante esta ou nao ocupado.
 	public void setOcupado(boolean ocupado) {
 		this.ocupado = ocupado;
 	}
 	
-	//Retorna se o assinante estabeleceu conexão com outro assinante.
+	//Retorna se o assinante estabeleceu conexao com outro assinante.
 	public boolean isEmLigacao() {
 		return emLigacao;
 	}
 	
-	//Altera o valor da variável emLigação. Configura se o assinante está ou não em ligação.
+	//Altera o valor da variavel emLigacao. Configura se o assinante esta ou nao em ligacao.
 	public void setEmLigacao(boolean emLigacao) {
 		this.emLigacao = emLigacao;
 	}
 	
-	//Retorna se o telefone do assinante está tocando.
+	//Retorna se o telefone do assinante esta tocando.
 	public boolean isTelTocando() {
 		return telTocando;
 	}
 	
-	//Altera o valor da variável telTocando. Configura se o telefone do assinante está ou não tocando.
+	//Altera o valor da variavel telTocando. Configura se o telefone do assinante esta ou nao tocando.
 	public void setTelTocando(boolean telTocando) {
 		this.telTocando = telTocando;
 	}
@@ -89,12 +101,12 @@ public class Assinante {
 		return impulsos;
 	}
 	
-	//Altera o valor da variável impulsos. Configura a quantidade de impulsos consumidos pelo assinante.
+	//Altera o valor da variavel impulsos. Configura a quantidade de impulsos consumidos pelo assinante.
 	public void setImpulsos(int impulsos) {
 		this.impulsos = impulsos;
 	}
 		
-	//Imprime o nome do assinante e uma mensagem passada como parâmetro.
+	//Imprime o nome do assinante e uma mensagem passada como parametro.
 	public void imprimeMsg(String msg){
 		System.out.println("Assinante: " + getNome() + " Mensagem: " + msg);
 	}
