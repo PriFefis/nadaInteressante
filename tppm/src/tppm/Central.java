@@ -123,7 +123,7 @@ public class Central {
 	}
 	
 	//Se o assinante existir, retorna o assinante. Caso contrario retorna null.
-	public Assinante getAssinante(String nome) { //D�vida no tipo de retorno
+	public Assinante getAssinante(String nome) { 
 		Assinante assinante;
 		for (int i = 0; i < this.assinante.size(); i++) {
 			assinante = this.assinante.get(i);
@@ -133,7 +133,6 @@ public class Central {
 		}
 
 		return null;
-
 	}
 	
 	//Adiciona um assinante na central.
