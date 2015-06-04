@@ -46,21 +46,20 @@ public class Central {
 		switch (returnIndex(sinal, "ocupado", "discar", "chamar")) {
 
 		case 0:
-			assinante.print("o sinal é" + sinal);
+			assinante.print("o sinal eh " + sinal);
 			break;
 
 		case 1:
-			assinante.print("o sinal é" + sinal);
+			assinante.print("o sinal eh " + sinal);
 			break;
 
 		case 2:
-			assinante.print("o sinal é" + sinal);
+			assinante.print("o sinal eh " + sinal);
 			break;
 
 		default:
-			assinante.print("Sinal Invalido;");
+			assinante.print("Sinal Invalido!");
 		}
-
 	}
 		
 	//Retorna as linhas da central, se houver, ou null se nao houver.	
@@ -73,7 +72,6 @@ public class Central {
 	public void addLinha(String centralA, String centralB){
 		Linha linha = new Line(central_A, central_B);
 		this.linha.add(linha);
-		
 	}
 	
 	//Remove uma linha da central.
@@ -87,9 +85,7 @@ public class Central {
 				this.linha.remove(i);
 				break;
 			}
-
 		}
-
 	}
 
 	//Pesquisa na central A se existe uma conexao com a central B.
@@ -104,8 +100,7 @@ public class Central {
 		for (int i = 0; i < caminho.size(); i++) {
 			linha = this.linha.get(caminho.get(i));
 			linha.setAvailable(estado);
-		}
-		
+		}		
 	}
 	
 	//Se o assinante existir, retorna true. Caso contrario retorna false.
@@ -117,9 +112,7 @@ public class Central {
 				return true;
 			}
 		}
-
 		return false;
-
 	}
 	
 	//Se o assinante existir, retorna o assinante. Caso contrario retorna null.
@@ -131,15 +124,13 @@ public class Central {
 				return assinante;
 			}
 		}
-
 		return null;
 	}
 	
 	//Adiciona um assinante na central.
 	public void addAssinante(String nome) {
 		Assinante assinante = new Assinante(nome);
-		this.assinante.add(assinante);
-		
+		this.assinante.add(assinante);	
 	}
 	
 	//Remove um assinante da central.
@@ -151,9 +142,7 @@ public class Central {
 				this.assinante.remove(i);
 				break;
 			}
-		}
-
-		
+		}		
 	}
 	
 	//Verifica se o assinante existe e retorna se ele esta disponivel ou nao.
@@ -161,10 +150,8 @@ public class Central {
 		if (!consultAssinante(nome)) {
 			return false;
 		}
-
 		Assinante assinante = getAssinante(nome);
 		return assinante.getAvailable();
-
 	}
 	
 	//Chama as funcoes do assinante: setOcupado e setTelTocando.
@@ -172,19 +159,15 @@ public class Central {
 		if (!consultAssinante(nome)) {
 			return;
 		}
-
 		Assinante assinante = getAssinantet(nome);
 		assinante.setOcupado(estaOcupado);
 		assinante.setTocando(estaTocando);
-
 	}
 	
 	//Pesquisa todos os assinantes e retorna uma lista com seus nomes.
 	public List<Assinante> listaAssinante(String nome) {
-
 		Assinante assinante;
 		String []assinantes = new String[this.assinante.size()];
-
 		for (int i = 0; i < this.assinante.size(); i++) {
 			assinante = this.assinante.get(i);
 			assinantes[i] = assinante.getNome();
@@ -209,17 +192,13 @@ public class Central {
 	/* Estabelece conexao entre os assinantes A e B, soma o valor da ligacao na conta do que fez a ligacao e 
 	  retorna o caminho percorrido entre os mesmos.*/
 	public ArrayList<Integer> conectaAssinante(String assinanteA, String assinanteB, String central) {
-
 		ArrayList<Integer> conexao = new ArrayList<Integer>();
 		findconexao(this.label, central, conexao);
-
 		if (conexao.size() < 0) {
 			sendSinal(client_a, "ocupado");
 		} else {
 			setLinha(conexao, false);
 			...;
 		}
-
 	}
-
 }
