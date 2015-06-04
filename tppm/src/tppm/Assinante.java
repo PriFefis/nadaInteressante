@@ -1,8 +1,9 @@
 /* 
- Essa classe e responsavel por armazenar os dados do assinante, a quantidade de ligacoes realizadas, 
-     se este esta em uma ligacao, se seu telefone esta tocando e se esta ocupado. 
- * Ha funcoes para retornar cada um destes elementos, funcoes para modificar as variaveis que podem ser alteradas 
-     e uma funcao que retorna se o assinante pode receber ou nao uma requisicao de chamada (getAvailable).
+ Essa classe e responsavel por armazenar os dados do assinante, a quantidade de ligacoes 
+   realizadas, se este esta em uma ligacao, se seu telefone esta tocando e se esta 
+   ocupado. Ha funcoes para retornar cada um destes elementos, funcoes para modificar 
+   as variaveis que podem ser alteradas e uma funcao que retorna se o assinante pode 
+   receber ou nao uma requisicao de chamada (getAvailable).
 */
 
 package tppm;
@@ -10,7 +11,6 @@ package tppm;
 public class Assinante { 
 	
 	private String nome;
-	//private int id;
 	private String tel;
 	private boolean ocupado;
 	private boolean emLigacao;
@@ -31,12 +31,6 @@ public class Assinante {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-//	public int getId() {
-//		return id;
-//	}
-//	public void setId(int id) {
-//		this.id = id;
-//	}
 
 	//Retorna o numero do telefone do assinante.
 	public String getTel() {
