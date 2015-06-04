@@ -11,6 +11,8 @@ import java.util.List;
 
 public class Central {
 	private String label;
+	private List<Assinante> assinantes;
+	private List<Conexao> conexoes;
 	
 	//O construtor cria uma central sem nenhuma conexao ou assinantes.
 	public Central(String label) {
