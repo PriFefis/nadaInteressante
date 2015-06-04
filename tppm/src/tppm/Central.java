@@ -11,12 +11,14 @@ import java.util.List;
 
 public class Central {
 	private String label;
-	private List<Assinante> assinantes;
-	private List<Conexao> conexoes;
+	private ArrayList<Assinante> assinantes;
+	private ArrayList<Conexao> conexoes;
 	
 	//O construtor cria uma central sem nenhuma conexao ou assinantes.
 	public Central(String label) {
 		this.label = label;
+		this.conexoes = new ArrayList<Conexao>;
+		this.assinantes = new ArrayList<Assinante>;
 	}
 
     //Retorna o nome da central.
@@ -27,6 +29,31 @@ public class Central {
 	//Envia o sinal "sinal" para o assinante "nome". Se o sinal nao existir, imprime sinal nao existente.
 	//Sinal pode ser: ocupado, discar, chamando...
 	public void enviaSinal(String nome, String sinal) {
+		if (!consultClient(nome)) {
+			return;
+		}
+
+		Client client = this.getClient(name);
+        switch (returnIndex(signal, "busy", "ringing", "dial")) {
+
+            case 0:
+				client.print("the signal is " + signal);
+				break;
+
+            case 1:
+				client.print("the signal is " + signal);
+				break;
+
+            case 2:
+				client.print("the signal is " + signal);
+				break;
+
+            default:
+				client.print("invalid signal;");
+
+        }
+
+	}
 		
 	}
 		
@@ -64,7 +91,7 @@ public class Central {
 	}
 	
 	//Se o assinante existir, retorna o assinante. Caso contrario retorna null.
-	public Assinante getAssinante(String nome) { //Dúvida no tipo de retorno
+	public Assinante getAssinante(String nome) { //Dï¿½vida no tipo de retorno
 		return null;   	
 	}
 	
