@@ -71,7 +71,7 @@ public class Central {
 	
 	//Adiciona uma linha entre as centrais A e B.
 	public void addLinha(String centralA, String centralB){
-		Linha linha = new Line(central_A, central_B);
+		Linha linha = new Line(centralA, centralB);
 		this.linha.add(linha);
 	}
 	
@@ -91,16 +91,73 @@ public class Central {
 
 	//Pesquisa na central A se existe uma conexao com a central B.
 	public boolean encontraLinha(String centralA, String centralB, ArrayList<Integer> caminho) {
-		
-		return false; 		
+
+		Linha linha;
+
+		for (int i = 0; i < this.linha.size(); i++) {
+
+			Linha = this.get(i);
+			if (!caminho.contains(i) &&
+					linha.getDisponivel() &&
+					linha.getCentral(centralA) && 
+					linha.getCentral(centralB)) {
+
+				caminho.append(i);
+				return;
+
+			}
+
+		}
+
+		//busca em profundidade
+		for (int i = 0; i < this.linha.size(); i++) {
+
+			Linha = this.linha.get(i);
+
+			if (caminho.contains(i)) {
+				continue;
+			}
+
+			//Checar se a linha esta ocupada
+			if (!linha.getDisponivel()) {
+				continue;
+			}
+
+			// Conecta com a centralA
+			if (!linha.getCentral(centralA)) {
+				continue;
+			}
+
+			// Conecta com a centralB
+			caminho.add(i);
+			if (linha.getCentral(centralB)) {
+
+				return;
+
+			} else {
+
+				encontraLinha(linha.getEndCentral(centralA),
+						centralB, caminho);
+
+				Integer id = caminho.get(caminho.size() - 1);
+				Linha ultima = this.linha.get(id);
+				if (ultima.getCentral(centralB)) {
+					return;
+				} else {
+					caminho.remove(caminho.size() - 1);
+				}
+
+			}
+
+		}
 	}
-	
+
 	//Altera o estado da linha.
 	public void setLinha(ArrayList<Integer> caminho, boolean estado) {
 		Linha linha;
 		for (int i = 0; i < caminho.size(); i++) {
 			linha = this.linha.get(caminho.get(i));
-			linha.setAvailable(estado);
+			linha.setDisponivel(estado);
 		}		
 	}
 	
@@ -152,7 +209,7 @@ public class Central {
 			return false;
 		}
 		Assinante assinante = getAssinante(nome);
-		return assinante.getAvailable();
+		return assinante.getDisponivel();
 	}
 	
 	//Chama as funcoes do assinante: setOcupado e setTelTocando.
