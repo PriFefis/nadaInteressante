@@ -8,14 +8,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class main {
-
-<<<<<<< HEAD
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//teste
 		//sempre sincronizar!!!!!
 		System.out.println("boa sorte!!");
-=======
 	public static void main(String[] args) throws IOException {
 		InputStream is = null;
 		BufferedReader br = null;
@@ -39,7 +36,6 @@ public class main {
 			System.out.println("Falha ao fechar arquivo");
 		}
 	     
->>>>>>> branch 'master' of https://github.com/PriFefis/nadaInteressante.git
 	}
 
 }
