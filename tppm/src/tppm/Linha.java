@@ -1,11 +1,6 @@
-
-package tppm;
-
  /* Essa classe e responsavel por armazenar as duas centrais conectadas por uma linha, 
     retorna-las quando necessario e informar se a linha esta ou nao ocupada.
-
-Sol, essa classe nao e referente a uma ligacao feita por um assinante. Ela diz respeito a uma linha (conexao) 
-que existe entre duas centrais.*/
+*/
 
 package tppm;
 
@@ -27,7 +22,7 @@ public class Linha {
 			return this.central[1];
 		} else {
 			return this.central[0];
-		};
+		}
 	}
 	
 	//Retorna true se a central label existir e false se nao existir.
