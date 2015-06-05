@@ -11,100 +11,122 @@ package tppm;
 public class Assinante { 
 	
 	private String nome;
-	private String tel;
+	//private String tel;
 	private boolean ocupado;
 	private boolean emLigacao;
 	private boolean telTocando;
 	private int impulsos;
-	private int quantLigacoesRealizadas;
+	//private int quantLigacoesRealizadas;
 	
-	public Assinante() {
-		// TODO Auto-generated constructor stub
+	public Assinante(String nome) {
+		this.nome = nome;
+		this.ocupado = false;
+		this.emLigacao = false;
+		this.telTocando = false;
+		this.impulsos = 0;
 	}
+	
+	/* ---------------------- M�todos get ---------------------- */
 	
 	//Retorna o nome do assinante.
 	public String getNome() {
 		return nome;
 	}
 	
+	/*Se o assinante estiver em uma ligacao ou seu telefone estiver tocando, retorna false. 
+	 Retorna true se uma destas condicoes forem diferentes. */
+	public boolean getDisponivel () 
+	{
+		if (estaOcupado() || telEstaTocando())
+			return false;
+		else
+			return true;
+	}
+	
+//	//Retorna o numero do telefone do assinante.
+//	public String getTel() 
+//	{
+//		return tel;
+//	}
+	
+//	//Retorna a quantidade de ligacoes realizadas pelo assinante.
+//	public int getQuantLigacoesRealizadas() 
+//	{
+//		return quantLigacoesRealizadas;
+//	}	
+	
+	//Retorna a quantidade de impulsos consumidos pelo assinante.
+	public int getImpulsos() 
+	{
+		return this.impulsos;
+	}
+	
+	//Retorna se o assinante esta ocupado ou nao.
+	public boolean estaOcupado() 
+	{
+		return this.ocupado;
+	}
+	
+	//Retorna se o assinante estabeleceu conexao com outro assinante.
+	public boolean estaEmLigacao() 
+	{
+		return this.emLigacao;
+	}
+	
+	//Retorna se o telefone do assinante esta tocando ou nao.
+	public boolean telEstaTocando() 
+	{
+		return this.telTocando;
+	}	
+	
+	/* ---------------------- M�todos set ---------------------- */
+	
 	//Configura (setta) o nome do assinante.
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	//Retorna o numero do telefone do assinante.
-	public String getTel() {
-		return tel;
-	}
 	
-	//"Configura" (setta) o telefone do assinante.
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
-	
-	//Retorna a quantidade de ligacoes realizadas pelo assinante.
-	public int getQuantLigacoesRealizadas() {
-		return quantLigacoesRealizadas;
-	}
+//	//"Configura" (setta) o telefone do assinante.
+//	public void setTel(String tel) 
+//	{
+//		this.tel = tel;
+//	}
 
-	//configura a quantidade de ligacoes realizadas pelo assinante.
-	public void setQuantLigacoesRealizadas(int quantLigacoesRealizadas) {
-		this.quantLigacoesRealizadas = quantLigacoesRealizadas;
-	}
-
-	/*Se o assinante nao estiver em uma ligacao e seu telefone nao estiver tocando, retorna true. 
-	 Retorna false se uma destas condicoes forem diferentes. */
-	public boolean getDisponivel () {
-		if (!isEmLigacao() && !isTelTocando())
-			return true;
-		else
-			return false;
-	}
-	
-	//Retorna se o assinante esta ocupado ou nao.
-	public boolean isOcupado() {
-		return ocupado;
-	}
+//	//configura a quantidade de ligacoes realizadas pelo assinante.
+//	public void setQuantLigacoesRealizadas(int quantLigacoesRealizadas) 
+//	{
+//		this.quantLigacoesRealizadas = quantLigacoesRealizadas;
+//	}
 		
 	//Altera o valor da variavel ocupado. Configura se o assinante esta ou nao ocupado.
-	public void setOcupado(boolean ocupado) {
+	public void setOcupado(boolean ocupado) 
+	{
 		this.ocupado = ocupado;
-	}
-	
-	//Retorna se o assinante estabeleceu conexao com outro assinante.
-	public boolean isEmLigacao() {
-		return emLigacao;
-	}
+	}	
 	
 	//Altera o valor da variavel emLigacao. Configura se o assinante esta ou nao em ligacao.
-	public void setEmLigacao(boolean emLigacao) {
+	public void setEmLigacao(boolean emLigacao) 
+	{
 		this.emLigacao = emLigacao;
 	}
 	
-	//Retorna se o telefone do assinante esta tocando.
-	public boolean isTelTocando() {
-		return telTocando;
-	}
-	
 	//Altera o valor da variavel telTocando. Configura se o telefone do assinante esta ou nao tocando.
-	public void setTelTocando(boolean telTocando) {
+	public void setTelTocando(boolean telTocando) 
+	{
 		this.telTocando = telTocando;
 	}
 	
-	//Retorna a quantidade de impulsos consumidos pelo assinante.
-	public int getImpulsos() {
-		return impulsos;
-	}
-	
 	//Altera o valor da variavel impulsos. Configura a quantidade de impulsos consumidos pelo assinante.
-	public void setImpulsos(int impulsos) {
+	public void setImpulsos(int impulsos) 
+	{
 		this.impulsos = impulsos;
 	}
-		
+	
+	
 	//Imprime o nome do assinante e uma mensagem passada como parametro.
-	public void imprimeMsg(String msg){
-		System.out.println("Assinante: " + getNome() + " Mensagem: " + msg);
+	public void imprimeMsg(String msg)
+	{
+		System.out.println("Assinante: " + getNome() + ", Mensagem: " + msg);
 	}
-	
-	
+
 }
