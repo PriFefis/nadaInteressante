@@ -8,7 +8,7 @@ public class main {
 	{
 		Rede r;
 		/* O arquivo que contem a configuracao das centrais, assinantes e linhas sera 
-		 * passado como parametro para o programa (args). */
+		   passado como parametro para o programa (args). */
 		try 
 		{
 			r = new Rede(args[0]);
