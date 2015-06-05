@@ -1,17 +1,15 @@
-public class Central {
-	private String label;
-	private ArrayList<Assinante> assinante;
-	private ArrayList<Linha> linha;
-	
-	//O construtor cria uma central sem nenhuma conexao ou assinantes.
-	public Central(String label) {
-		this.label = label;
-		this.linha = new ArrayList<Linha>;
-		this.assinante = new ArrayList<Assinante>;
-	}
+/*
+ * Essa classe e responsavel por armazenar o nome da central, todos os seus assinantes e 
+   todas as linhas que esta central possui. Tambem e responsavel pela manutencao dos 
+   assinantes e linhas entre as centrais, enviar contas para os assinantes e conectar 
+   seus assinantes com os assinantes de outras centrais.
+*/
 
-    //Retorna o nome da central.
-	public String getLabel() {
+package tppm;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Central {
 	private String label;
 	private ArrayList<Assinante> assinante;
