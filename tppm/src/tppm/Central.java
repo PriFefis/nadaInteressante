@@ -30,6 +30,22 @@ public class Central
 		return this.id;
 	}
 	
+	//Retorna as linhas da central, se houver, ou null se nao houver.	
+	public Linha getLinha(String central) 
+	{ 
+		Linha linha;
+		int i=0;
+		while (i < this.linha.size())
+		{
+			linha = this.linha.get(i);
+			boolean id = linha.getCentral(this.id);
+			boolean cent = linha.getCentral(central);
+			if (id && cent) return linha;
+			i++;
+		}
+		return null;  		
+	}
+	
 	private static int retIndice(String in, String... args) 
 	{
 		for (int i = 0; i < args.length; i++) 
@@ -62,52 +78,8 @@ public class Central
 		default:
 			assinante.imprimeMsg("Sinal Invalido!");
 		}
-	}
-		
-	//Retorna as linhas da central, se houver, ou null se nao houver.	
-	public Linha getLinha(String central) 
-	{ 
-		Linha linha;
-		int i=0;
-		while (i < this.linha.size())
-		{
-			linha = this.linha.get(i);
-			boolean id = linha.getCentral(this.id);
-			boolean cent = linha.getCentral(central);
-			if (id && cent) return linha;
-			i++;
-		}
-		return null;  		
-	}
+	}	
 	
-	//Adiciona uma linha entre as centrais A e B.
-	public void addLinha(String centralOrig, String centralDest)
-	{
-		Linha linha;
-		linha = new Linha(centralOrig, centralDest);
-		this.linha.add(linha);
-	}
-	
-	//Remove uma linha da central.
-	public void removeLinha(String central) 
-	{
-		Linha linha;
-		int tam = this.linha.size();
-		int i=0;
-		while (i < tam) 
-		{
-			linha = this.linha.get(i);
-			boolean id = linha.getCentral(this.id);
-			boolean cent = linha.getCentral(central);
-			if (id && cent) 
-			{
-				this.linha.remove(i);
-				break;
-			}
-			i++;
-		}
-	}
-
 	//Pesquisa na central A se existe uma conexao com a central B.
 	public void encontraLinha(String centralA, String centralB, ArrayList<Integer> caminho) 
 	{
@@ -150,7 +122,7 @@ public class Central
 			}
 		}
 	}
-
+	
 	//Altera o estado da linha.
 	public void setLinha(ArrayList<Integer> caminho, boolean estado) 
 	{
@@ -162,20 +134,34 @@ public class Central
 			linha.setDisponivel(estado);
 			i++;
 		}		
+	}	
+	
+	//Adiciona uma linha entre as centrais A e B.
+	public void addLinha(String centralOrig, String centralDest)
+	{
+		Linha linha;
+		linha = new Linha(centralOrig, centralDest);
+		this.linha.add(linha);
 	}
 	
-	//Se o assinante existir, retorna true. Caso contrario retorna false.
-	public boolean consultaAssinante(String nome) 
+	//Remove uma linha da central.
+	public void removeLinha(String central) 
 	{
-		Assinante assinante;
-		int i = 0;
-		while(i < this.assinante.size())
+		Linha linha;
+		int tam = this.linha.size();
+		int i=0;
+		while (i < tam) 
 		{
-			assinante = this.assinante.get(i);
-			if (assinante.getNome() == nome) return true;
+			linha = this.linha.get(i);
+			boolean id = linha.getCentral(this.id);
+			boolean cent = linha.getCentral(central);
+			if (id && cent) 
+			{
+				this.linha.remove(i);
+				break;
+			}
 			i++;
 		}
-		return false;
 	}
 	
 	//Se o assinante existir, retorna o assinante. Caso contrario retorna null.
@@ -190,6 +176,20 @@ public class Central
 			i++;
 		}
 		return null;
+	}
+	
+	//Se o assinante existir, retorna true. Caso contrario retorna false.
+	public boolean consultaAssinante(String nome) 
+	{
+		Assinante assinante;
+		int i = 0;
+		while(i < this.assinante.size())
+		{
+			assinante = this.assinante.get(i);
+			if (assinante.getNome() == nome) return true;
+			i++;
+		}
+		return false;
 	}
 	
 	//Adiciona um assinante na central.
