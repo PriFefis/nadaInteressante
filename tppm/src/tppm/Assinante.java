@@ -26,7 +26,11 @@ public class Assinante {
 		this.impulsos = 0;
 	}
 	
+<<<<<<< HEAD
 	/* ---------------------- Metodos get ---------------------- */
+=======
+	/* ---------------------- M�todos get ---------------------- */
+>>>>>>> branch 'master' of https://github.com/PriFefis/nadaInteressante.git
 	
 	//Retorna o nome do assinante.
 	public String getNome() {
@@ -79,7 +83,11 @@ public class Assinante {
 		return this.telTocando;
 	}	
 	
+<<<<<<< HEAD
 	/* ---------------------- Metodos set ---------------------- */
+=======
+	/* ---------------------- M�todos set ---------------------- */
+>>>>>>> branch 'master' of https://github.com/PriFefis/nadaInteressante.git
 	
 	//Configura (setta) o nome do assinante.
 	public void setNome(String nome) {
