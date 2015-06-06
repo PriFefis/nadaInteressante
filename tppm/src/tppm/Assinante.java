@@ -26,11 +26,11 @@ public class Assinante {
 		this.impulsos = 0;
 	}
 	
-	/* ---------------------- Métodos get ---------------------- */
+	/* ---------------------- Metodos get ---------------------- */
 	
 	//Retorna o nome do assinante.
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 	
 	/*Se o assinante estiver em uma ligacao ou seu telefone estiver tocando, retorna false. 
@@ -79,7 +79,7 @@ public class Assinante {
 		return this.telTocando;
 	}	
 	
-	/* ---------------------- Métodos set ---------------------- */
+	/* ---------------------- Metodos set ---------------------- */
 	
 	//Configura (setta) o nome do assinante.
 	public void setNome(String nome) {

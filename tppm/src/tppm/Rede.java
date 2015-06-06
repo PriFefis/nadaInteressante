@@ -10,7 +10,6 @@
 package tppm;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Rede 
 {
@@ -21,27 +20,27 @@ public class Rede
 		this.c = config.getCentrais();
 	}
 	
-	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do label e retorna 
+	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do id e retorna 
 	  true. Caso contrario retorna false. */
-	public boolean consultaCentral (String label) 
+	public boolean consultaCentral (String id) 
 	{		
 		int l=1;
 		while (l < c.length)
 		{
-			if (this.c[l].getLabel()== label) return true;
+			if (this.c[l].getId()== id) return true;
 			l = l+1;
 		}
 		return false;
 	}
 	
-	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do label e retorna a 
+	/*Pesquisa em todas as centrais. Se encontrar, faz a atribuicao do id e retorna a 
 	  central. Caso contrario retorna null. */
-	public Central getCentral (String label) 
+	public Central getCentral (String id) 
 	{
 		int l = 0;
 		while (l < c.length)
 		{
-			if(this.c[l].getLabel()==label) return (this.c[l]);
+			if(this.c[l].getId()==id) return (this.c[l]);
 			l++;
 		}
 		return null;
@@ -64,15 +63,13 @@ public class Rede
 		{
 			if (a.conectaAssinante(assinanteA, assinanteB, centralB)) //VERIFICAR RETORNO...
 			{
-				a.enviaSinal(assinanteA, "Telefone chamando...");
+				a.enviaSinal(assinanteA, "Ligando...");
 				b.enviaSinal(assinanteB, "Telefone tocando...");
-				//return true;
 			}
 		}
 		else 
 			a.enviaSinal(assinanteA, "Ocupado!");
-				
-		//return false;
+			//TO DO...
 	}
 	
 //	/*Pesquisa se a central e o caminho existem. Se nao, indica que nao existe conexao e 

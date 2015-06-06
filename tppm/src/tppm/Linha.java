@@ -4,43 +4,45 @@
 
 package tppm;
 
-public class Linha {
-	private String central_A;
-	private String central_B;
+public class Linha 
+{
 	private boolean disponivel;
-	
+	private String[] centrais;
+
 	//O construtor cria uma linha desocupada entre as centrais A e B.
-	public Linha(String centralA, String centralB) {
+	public Linha(String centralA, String centralB) 
+	{
 		this.disponivel = true;
-		this.central_A[0] = centralA;
-		this.central_B[1] = centralB;
+		this.centrais = new String[2];
+		this.centrais[0] = centralA;
+		this.centrais[1] = centralB;
 	}
 	
-	//Retorna a central do outro lado da linha, conectada com a central label.
-	public Central getCentralConectada (String label){
-		if (label == this.central[0]) {
-			return this.central[1];
-		} else {
-			return this.central[0];
-		}
+	//Verifica se a linha esta ocupada ou nao.
+	public boolean getDisponivel() 
+	{
+		return this.disponivel;		
 	}
 	
-	//Retorna true se a central label existir e false se nao existir.
-	public boolean getCentral(String label) {
-		if ((this.central[0] == label) ||
-				(this.central[1] == label)) {
-			return true;
-		}
+	//Retorna true se a central id existir e false se nao existir.
+	public boolean getCentral(String id) 
+	{
+		boolean cond1 = this.centrais[0] == id;
+		boolean cond2 = this.centrais[1] == id;
+		if (cond1 || cond2) return true;
 		return false;
 	}
 	
-	//Retorna se a linha esta ocupada.
-	public boolean getDisponivel() {
-		return disponivel;		
-	}
-	
+	//Retorna a central do outro lado da linha, conectada com a central id.
+	public String getCentralConectada (String id)
+	{
+		if (id == this.centrais[0]) return this.centrais[1];
+		else return this.centrais[0];
+	}	
+		
 	//Altera o valor da variavel disponivel.
-	public void setDisponivel(boolean disponivel) {
+	public void setDisponivel(boolean disponivel) 
+	{
 		this.disponivel = disponivel;
 	}
 }
