@@ -126,7 +126,7 @@ public class Assinante {
 	//Imprime o nome do assinante e uma mensagem passada como parametro.
 	public void imprimeMsg(String msg)
 	{
-		System.out.println("Assinante: " + getNome() + ", Mensagem: " + msg);
+		System.out.println("Assinante: " + getNome() + ", " + msg);
 	}
 
 }

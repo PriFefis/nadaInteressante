@@ -255,8 +255,8 @@ public class Central
 		{
 			Assinante assinante;
 			assinante = getAssinante(nome);
-			assinante.imprimeMsg("Prezado(a) " + nome + ", voce consumiu " + assinante.getImpulsos() + ". ");
-			assinante.imprimeMsg("O valor da sua fatura eh R$" + calculaValor(assinante.getImpulsos()));
+			assinante.imprimeMsg("voce consumiu " + assinante.getImpulsos() + ". ");
+			assinante.imprimeMsg("O valor da sua fatura eh R$" + calculaValor(assinante.getImpulsos())+ ".");
 		}
 	}
 	
